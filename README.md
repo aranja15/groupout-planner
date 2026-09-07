@@ -26,42 +26,6 @@ For each member, the input specifies availability, maximum budget, maximum trave
 
 If the group wants food, each candidate contains one restaurant, a fixed 20-minute travel buffer, and one activity. Otherwise, candidates contain one activity.
 
-## Run the existing local copy on macOS
-
-The local project is stored at:
-
-```text
-/Users/arjunranjan/Desktop/Masters/Fall 2026/CSE598Agentic/groupout-planner
-```
-
-Follow these steps:
-
-1. Click **Finder** in the Dock.
-2. Open **Desktop**, then **Masters**, **Fall 2026**, **CSE598Agentic**, and **groupout-planner**.
-3. Open **Terminal** from **Applications > Utilities > Terminal**. You can also press Command-Space, type `Terminal`, and press Return.
-4. In Terminal, type `cd ` with a space after it.
-5. Drag the `groupout-planner` folder from Finder into Terminal. The full folder path will appear automatically.
-6. Press Return.
-7. Copy the following command, paste it into Terminal, and press Return:
-
-```bash
-python3 planner.py --preferences examples/group1.json --places data/places.json --output outputs/group1_results.json
-```
-
-8. Confirm that three numbered recommendations appear and the final line says `Saved JSON results to: outputs/group1_results.json`.
-9. To view the saved result, return to Finder, open the `outputs` folder, and double-click `group1_results.json`.
-
-## Quick start by downloading a ZIP
-
-You do not need Git or programming experience for this method.
-
-1. Open this repository's GitHub page.
-2. Click the green **Code** button.
-3. Click **Download ZIP**.
-4. Open the downloaded ZIP file to extract it.
-5. Open the extracted `groupout-planner` folder.
-6. Follow the instructions for your operating system below.
-
 ## Requirements
 
 - Python 3.10 or newer
@@ -69,6 +33,27 @@ You do not need Git or programming experience for this method.
 - No API keys
 - No environment variables
 - No network connection after downloading the project
+
+## Get the project
+
+Choose either method below.
+
+### Option 1: Download a ZIP
+
+1. Open this repository's GitHub page.
+2. Click the green **Code** button.
+3. Click **Download ZIP**.
+4. Extract the downloaded ZIP file.
+5. Open a terminal in the extracted `groupout-planner` folder.
+
+### Option 2: Clone with Git
+
+```bash
+git clone https://github.com/aranja15/groupout-planner.git
+cd groupout-planner
+```
+
+All commands below must be run from the folder containing `planner.py`.
 
 Check your Python version:
 
@@ -124,18 +109,6 @@ The included example produces this top result:
    Maximum distance: 3.4 miles
    Score: 63.2/100
 ```
-
-## Take your own screenshot
-
-1. Run the example command and leave the successful output visible in Terminal.
-2. Make the Terminal window wide enough to show the command and first recommendation clearly.
-3. On macOS, press **Shift-Command-4**, then drag around the Terminal command and output. The screenshot is normally saved to the Desktop.
-4. On Windows, press **Windows-Shift-S**, choose the rectangular snip, and drag around the command and output.
-5. Open the proposal in Microsoft Word and click below the Section 4 test-case paragraph.
-6. Click **Insert > Pictures > Picture from File**, choose your screenshot, and insert it.
-7. Resize it only if needed, keep the text readable, and confirm that the proposal remains no more than two pages.
-
-Screenshots are intentionally not stored in this repository. Each student should capture evidence from their own successful local run.
 
 ## Run the tests
 
