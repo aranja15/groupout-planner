@@ -4,8 +4,6 @@ GroupOut Planner is a small, deterministic baseline that recommends group-night 
 
 This baseline is deliberately simple. It does not call an AI model, use live venue data, make reservations, or require an internet connection. The same input always produces the same output.
 
-![Successful baseline run](docs/baseline-run.png)
-
 ## How it works
 
 ```mermaid
@@ -27,6 +25,31 @@ For each member, the input specifies availability, maximum budget, maximum trave
 - Dietary requirements: all restrictions reported by any member
 
 If the group wants food, each candidate contains one restaurant, a fixed 20-minute travel buffer, and one activity. Otherwise, candidates contain one activity.
+
+## Run the existing local copy on macOS
+
+The local project is stored at:
+
+```text
+/Users/arjunranjan/Desktop/Masters/Fall 2026/CSE598Agentic/groupout-planner
+```
+
+Follow these steps:
+
+1. Click **Finder** in the Dock.
+2. Open **Desktop**, then **Masters**, **Fall 2026**, **CSE598Agentic**, and **groupout-planner**.
+3. Open **Terminal** from **Applications > Utilities > Terminal**. You can also press Command-Space, type `Terminal`, and press Return.
+4. In Terminal, type `cd ` with a space after it.
+5. Drag the `groupout-planner` folder from Finder into Terminal. The full folder path will appear automatically.
+6. Press Return.
+7. Copy the following command, paste it into Terminal, and press Return:
+
+```bash
+python3 planner.py --preferences examples/group1.json --places data/places.json --output outputs/group1_results.json
+```
+
+8. Confirm that three numbered recommendations appear and the final line says `Saved JSON results to: outputs/group1_results.json`.
+9. To view the saved result, return to Finder, open the `outputs` folder, and double-click `group1_results.json`.
 
 ## Quick start by downloading a ZIP
 
@@ -102,6 +125,18 @@ The included example produces this top result:
    Score: 63.2/100
 ```
 
+## Take your own screenshot
+
+1. Run the example command and leave the successful output visible in Terminal.
+2. Make the Terminal window wide enough to show the command and first recommendation clearly.
+3. On macOS, press **Shift-Command-4**, then drag around the Terminal command and output. The screenshot is normally saved to the Desktop.
+4. On Windows, press **Windows-Shift-S**, choose the rectangular snip, and drag around the command and output.
+5. Open the proposal in Microsoft Word and click below the Section 4 test-case paragraph.
+6. Click **Insert > Pictures > Picture from File**, choose your screenshot, and insert it.
+7. Resize it only if needed, keep the text readable, and confirm that the proposal remains no more than two pages.
+
+Screenshots are intentionally not stored in this repository. Each student should capture evidence from their own successful local run.
+
 ## Run the tests
 
 The tests use Python's built-in `unittest` module, so there is nothing else to install.
@@ -135,7 +170,6 @@ OK
 | `data/places.json` | Twelve fictional Tempe-area restaurants and activities |
 | `outputs/group1_results.json` | Actual output produced by the included test case |
 | `tests/test_planner.py` | Automated tests for constraints, filtering, ranking, and errors |
-| `docs/baseline-run.png` | Screenshot showing the baseline command and output |
 
 ## Preference input reference
 
@@ -170,6 +204,19 @@ Every remaining plan receives up to 100 points:
 | Time-window fit | 10 | Up to 10 points for unused time before the shared end |
 
 The score is a baseline heuristic, not a claim that one plan is objectively best. Equal scores are sorted by plan name so results remain deterministic.
+
+## What the Python code does
+
+The program follows six simple steps:
+
+1. `load_json` reads the group preferences and places files.
+2. `validate_preferences` and `validate_places` check that required fields are present and that values such as time, cost, and distance are valid.
+3. `aggregate_preferences` finds the time when everyone is free, the lowest budget, the shortest distance limit, and all dietary requirements.
+4. `build_ranked_plans` combines each compatible restaurant with each activity. It removes combinations that are too expensive, too far away, closed, incompatible with dietary needs, or too long for the shared time window.
+5. `_score_plan` assigns points for activity preference coverage, budget headroom, shorter distance, and unused time.
+6. `print_result` displays the top three plans, while `write_result` saves the same information as JSON.
+
+There is no randomness. Equal scores are resolved alphabetically, so the included files always produce the same ranking.
 
 ## Troubleshooting
 
