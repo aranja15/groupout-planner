@@ -1,0 +1,134 @@
+[
+  {
+    "name": "Copper Cactus Kitchen",
+    "type": "restaurant",
+    "category": "southwestern",
+    "cost_per_person": 14,
+    "distance_miles": 2.2,
+    "open_time": "17:00",
+    "close_time": "22:30",
+    "duration_minutes": 60,
+    "dietary_options": ["vegetarian", "vegan", "gluten-free"]
+  },
+  {
+    "name": "Desert Garden Tacos",
+    "type": "restaurant",
+    "category": "tacos",
+    "cost_per_person": 12,
+    "distance_miles": 4.8,
+    "open_time": "16:00",
+    "close_time": "23:00",
+    "duration_minutes": 60,
+    "dietary_options": ["vegetarian", "gluten-free"]
+  },
+  {
+    "name": "Mill Avenue Noodle House",
+    "type": "restaurant",
+    "category": "asian",
+    "cost_per_person": 16,
+    "distance_miles": 3.0,
+    "open_time": "17:00",
+    "close_time": "23:30",
+    "duration_minutes": 60,
+    "dietary_options": ["vegetarian", "vegan", "gluten-free"]
+  },
+  {
+    "name": "Sun Devil Grill",
+    "type": "restaurant",
+    "category": "american",
+    "cost_per_person": 18,
+    "distance_miles": 7.2,
+    "open_time": "11:00",
+    "close_time": "23:00",
+    "duration_minutes": 60,
+    "dietary_options": ["vegetarian", "gluten-free"]
+  },
+  {
+    "name": "Tempe Lake Cafe",
+    "type": "restaurant",
+    "category": "cafe",
+    "cost_per_person": 20,
+    "distance_miles": 1.5,
+    "open_time": "08:00",
+    "close_time": "22:00",
+    "duration_minutes": 60,
+    "dietary_options": ["vegetarian"]
+  },
+  {
+    "name": "Campus Escape Room",
+    "type": "activity",
+    "category": "escape-room",
+    "cost_per_person": 24,
+    "distance_miles": 2.5,
+    "open_time": "16:00",
+    "close_time": "23:00",
+    "duration_minutes": 60,
+    "dietary_options": []
+  },
+  {
+    "name": "Cactus Lane Bowling",
+    "type": "activity",
+    "category": "bowling",
+    "cost_per_person": 18,
+    "distance_miles": 3.4,
+    "open_time": "15:00",
+    "close_time": "24:00",
+    "duration_minutes": 90,
+    "dietary_options": []
+  },
+  {
+    "name": "Desert Paddle Club",
+    "type": "activity",
+    "category": "pickleball",
+    "cost_per_person": 9,
+    "distance_miles": 5.2,
+    "open_time": "17:00",
+    "close_time": "22:00",
+    "duration_minutes": 90,
+    "dietary_options": []
+  },
+  {
+    "name": "Mill Avenue Arcade",
+    "type": "activity",
+    "category": "arcade",
+    "cost_per_person": 14,
+    "distance_miles": 2.8,
+    "open_time": "16:00",
+    "close_time": "23:30",
+    "duration_minutes": 75,
+    "dietary_options": []
+  },
+  {
+    "name": "Papago Board Game Lounge",
+    "type": "activity",
+    "category": "chilling",
+    "cost_per_person": 8,
+    "distance_miles": 4.0,
+    "open_time": "17:00",
+    "close_time": "23:00",
+    "duration_minutes": 90,
+    "dietary_options": []
+  },
+  {
+    "name": "South Mountain Climbing Hall",
+    "type": "activity",
+    "category": "climbing",
+    "cost_per_person": 22,
+    "distance_miles": 8.5,
+    "open_time": "10:00",
+    "close_time": "22:00",
+    "duration_minutes": 90,
+    "dietary_options": []
+  },
+  {
+    "name": "Tempe Moonlight Mini Golf",
+    "type": "activity",
+    "category": "mini-golf",
+    "cost_per_person": 16,
+    "distance_miles": 6.0,
+    "open_time": "17:00",
+    "close_time": "23:00",
+    "duration_minutes": 75,
+    "dietary_options": []
+  }
+]

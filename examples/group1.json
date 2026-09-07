@@ -1,0 +1,34 @@
+{
+  "group_name": "Friday Night Group",
+  "meeting_location": "Downtown Tempe",
+  "wants_food": true,
+  "members": [
+    {
+      "name": "Alex",
+      "available_start": "18:00",
+      "available_end": "22:30",
+      "max_budget": 45,
+      "max_distance_miles": 8,
+      "dietary_restrictions": ["vegetarian"],
+      "preferred_activities": ["bowling", "chilling"]
+    },
+    {
+      "name": "Sam",
+      "available_start": "19:00",
+      "available_end": "23:00",
+      "max_budget": 40,
+      "max_distance_miles": 6,
+      "dietary_restrictions": [],
+      "preferred_activities": ["pickleball", "bowling"]
+    },
+    {
+      "name": "Jordan",
+      "available_start": "18:30",
+      "available_end": "22:00",
+      "max_budget": 50,
+      "max_distance_miles": 7,
+      "dietary_restrictions": ["gluten-free"],
+      "preferred_activities": ["bowling", "arcade"]
+    }
+  ]
+}

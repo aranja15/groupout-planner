@@ -1,0 +1,124 @@
+{
+  "group_name": "Friday Night Group",
+  "meeting_location": "Downtown Tempe",
+  "method": "Static rule-based filtering and deterministic ranking",
+  "constraints": {
+    "shared_availability": "7:00 PM-10:00 PM",
+    "budget_limit_per_person": 40.0,
+    "distance_limit_miles": 6.0,
+    "dietary_requirements": [
+      "gluten-free",
+      "vegetarian"
+    ]
+  },
+  "recommendations": [
+    {
+      "name": "Copper Cactus Kitchen + Cactus Lane Bowling",
+      "schedule": "7:00 PM-9:50 PM",
+      "estimated_cost_per_person": 32.0,
+      "maximum_distance_miles": 3.4,
+      "score": 63.2,
+      "score_components": {
+        "activity_preference": 50.0,
+        "budget_headroom": 5.0,
+        "distance": 6.5,
+        "time_window_fit": 1.7
+      },
+      "stops": [
+        {
+          "name": "Copper Cactus Kitchen",
+          "type": "restaurant",
+          "category": "southwestern",
+          "start": "7:00 PM",
+          "end": "8:00 PM"
+        },
+        {
+          "name": "Cactus Lane Bowling",
+          "type": "activity",
+          "category": "bowling",
+          "start": "8:20 PM",
+          "end": "9:50 PM"
+        }
+      ],
+      "reasons": [
+        "Bowling matches 3 of 3 members' activity preferences.",
+        "The restaurant supports gluten-free, vegetarian.",
+        "The estimated $32.00 cost is within the $40.00 per-person limit.",
+        "Every stop is within the 6.0-mile group limit.",
+        "The schedule fits the shared 7:00 PM-10:00 PM window."
+      ]
+    },
+    {
+      "name": "Mill Avenue Noodle House + Cactus Lane Bowling",
+      "schedule": "7:00 PM-9:50 PM",
+      "estimated_cost_per_person": 34.0,
+      "maximum_distance_miles": 3.4,
+      "score": 62.0,
+      "score_components": {
+        "activity_preference": 50.0,
+        "budget_headroom": 3.8,
+        "distance": 6.5,
+        "time_window_fit": 1.7
+      },
+      "stops": [
+        {
+          "name": "Mill Avenue Noodle House",
+          "type": "restaurant",
+          "category": "asian",
+          "start": "7:00 PM",
+          "end": "8:00 PM"
+        },
+        {
+          "name": "Cactus Lane Bowling",
+          "type": "activity",
+          "category": "bowling",
+          "start": "8:20 PM",
+          "end": "9:50 PM"
+        }
+      ],
+      "reasons": [
+        "Bowling matches 3 of 3 members' activity preferences.",
+        "The restaurant supports gluten-free, vegetarian.",
+        "The estimated $34.00 cost is within the $40.00 per-person limit.",
+        "Every stop is within the 6.0-mile group limit.",
+        "The schedule fits the shared 7:00 PM-10:00 PM window."
+      ]
+    },
+    {
+      "name": "Desert Garden Tacos + Cactus Lane Bowling",
+      "schedule": "7:00 PM-9:50 PM",
+      "estimated_cost_per_person": 30.0,
+      "maximum_distance_miles": 4.8,
+      "score": 60.9,
+      "score_components": {
+        "activity_preference": 50.0,
+        "budget_headroom": 6.2,
+        "distance": 3.0,
+        "time_window_fit": 1.7
+      },
+      "stops": [
+        {
+          "name": "Desert Garden Tacos",
+          "type": "restaurant",
+          "category": "tacos",
+          "start": "7:00 PM",
+          "end": "8:00 PM"
+        },
+        {
+          "name": "Cactus Lane Bowling",
+          "type": "activity",
+          "category": "bowling",
+          "start": "8:20 PM",
+          "end": "9:50 PM"
+        }
+      ],
+      "reasons": [
+        "Bowling matches 3 of 3 members' activity preferences.",
+        "The restaurant supports gluten-free, vegetarian.",
+        "The estimated $30.00 cost is within the $40.00 per-person limit.",
+        "Every stop is within the 6.0-mile group limit.",
+        "The schedule fits the shared 7:00 PM-10:00 PM window."
+      ]
+    }
+  ]
+}
